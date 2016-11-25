@@ -1,0 +1,21 @@
+{
+	"name": "qdt-cli",
+	"version": "0.0.1",
+	"description": "qdt prefix test",
+	"main": "lib/cli/index.js",
+	"trackingCode": "UQ-3162314-14",
+	"bin": {
+		"qdt": "./bin/qdt"
+	},
+	"engines": {
+		"node": ">= 4.1.0",
+		"npm": ">= 3.0.0"
+	},
+	"author": "Quast Datentechnik",
+	"license": "MIT",
+	"homepage": "http://quast-datentechnik.de",
+	"dependencies": {
+		"chalk": "^1.1.3",
+		"denodeify": "^1.2.1"
+	}
+}

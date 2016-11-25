@@ -1,0 +1,14 @@
+dist/
+node_modules/
+packages/qdt-cli/node_modules
+npm-debug.log*
+
+# IDEs
+.vscode/
+.vs/
+
+# Typings file
+typings/
+
+# Misc
+tmp/

@@ -1,0 +1,42 @@
+#!/usr/bin/env node
+'use strict';
+
+process.title = 'qdt-cli';
+
+const resolve = require( 'resolve' );
+const packageJson = require( '../package.json' );
+const Leek = require( 'leek' );
+//const version = require( '../upgrade/version' ).Version;
+
+resolve( 'qdt-cli', { basedir: process.cwd() },
+	function( error, projectLocalCli ) {
+		let cli;
+		if( error ) {
+			cli = require( '../lib/cli' );
+		} else {
+			cli = require( projectLocalCli );
+		}
+
+		if( 'default' in cli ) {
+			cli = cli['default'];
+		}
+
+		cli( {
+			cliArgs: process.argv.slice( 3 ),
+			inputStream: process.stdin,
+			outputStream: process.stdout,
+			Leek: CustomLeek
+		} ).then( function( result ) {
+			var exitCode = typeof result === 'object' ? result.exitCode : result;
+			console.log( exitCode );
+			process.exit( exitCode );
+		});
+
+		function CustomLeek( options ) {
+			options.trackingCode = packageJson.trackingCode;
+			options.globalName = packageJson.name;
+			options.name = packageJson.name;
+			options.version = packageJson.version;
+			return new Leek( options );
+		}
+});

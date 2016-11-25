@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+'use strict';
+
+process.title = 'qdt-cli';
+
+require('../lib/bootstrap-local');
+require('../packages/qdt-cli/bin/qdt');
