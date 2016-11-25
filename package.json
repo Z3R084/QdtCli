@@ -21,6 +21,10 @@
 		"type": "git",
 		"url": "https://github.com/Z3R084/QdtCli.git"
 	},
+	"bugs": {
+		"url": "https://github.com/Z3R084/QdtCli/issues"
+	},
+	"homepage": "http://quast-datentechnik.de",
 	"dependencies": {
 		"resolve": "^1.1.7",
 		"leek": "0.0.24",
@@ -46,7 +50,14 @@
 		"configstore": "^2.1.0",
 		"core-object": "^2.0.6",
 		"ember-cli-legacy-blueprints": "^0.1.2",
-		"ember-try": "^0.2.8"
+		"ember-try": "^0.2.8",
+		"clean-base-url": "^1.0.0",
+		"npm-package-arg": "^4.2.0",
+		"tree-sync": "^1.1.5",
+		"heimdalljs-fs-monitor": "^0.1.0",
+		"diff": "^3.0.1",
+		"isbinaryfile": "^3.0.1",
+		"bower-endpoint-parser": "^0.2.2"
 	},
 	"devDependencies": {
 		"@types/rimraf": "0.0.25-alpha",
